@@ -1,0 +1,395 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}
+    {\minipage[t]{\linewidth}\list{}{%
+        \setlength{\leftmargin}{\bibhang}%
+        \setlength{\itemindent}{-\leftmargin}%
+        \setlength{\itemsep}{\bibsep}%
+        \setlength{\parsep}{\z@}%
+        }}
+    {\endlist\endminipage}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+% 
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Chad A. Baker}
+
+\section{Contact Information}
+%
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.85in}%
+% The next command inserts a table.  Use '&' to separate elements of the table.
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+\href{http://www.me.utexas.edu//}%
+     {Department of Mechanical Engineering} & \\
+\href{http://www.utexas.edu/}{The University of Texas at Austin} 
+									& \textit{Cell:} (214) 695-4636 \\
+1 University Station, C2200 \\
+Austin, TX 78712-0292 \\
+\textit{E-mail:} \href{mailto:calbaker@utexas.edu}{calbaker@mail.utexas.edu}
+& \textit{E-mail:} \href{mailto:calbaker@gmail.com}{calbaker@gmail.com}\\
+\end{tabular}
+
+%\section{Citizenship}
+%%
+%USA
+
+\section{Research Interests}
+%
+modeling of mass, heat, and energy transport processes; combustion;
+catalyst optimization; heat exchanger optimization; second law
+efficiency optimization; contributing to open source software
+
+\section{Education}
+%
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at Austin}}, Austin, TX USA
+\begin{outerlist}
+\item[] Ph.D.,
+        \href{http://www.me.utexas.edu/}
+             {Mechanical Engineering}, Expected Graduation: Dec 2012
+        \begin{innerlist}        
+        \item Adviser:%
+              \href{http://www.me.utexas.edu/directory/faculty/hall/matthew/33/}
+                   {Professor Matthew J. Hall}
+        \item Area of Study: Thermal/Fluids Systems
+        \item GPA: 3.67
+        \end{innerlist}
+\end{outerlist}
+
+\blankline
+
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at Austin}}, Austin, TX USA
+\begin{outerlist}
+\item[] M.S.,
+        \href{http://www.me.utexas.edu/}
+             {Mechanical Engineering}, August 2009
+        \begin{innerlist}
+        \item Thesis Topic: \emph{Vapor Transport Techniques for
+            Growing Macroscopically Uniform Zinc Oxide Nanowires} 
+        \item Adviser:%
+              \href{http://www.me.utexas.edu/directory/faculty/hall/matthew/33/}
+                   {Professor Matthew J. Hall}
+        \item Area of Study: Thermal/Fluids Systems
+        \item GPA: 3.46
+        \end{innerlist}
+\end{outerlist}
+
+\blankline
+
+\href{http://www.tamu.edu/}{\textbf{Texas A\&M University}}, College Station, TX USA
+\begin{outerlist}
+\item[] B.S.,
+        \href{http://www.mengr.tamu.edu/}{Mechanical Engineering}, May
+        2007 
+        \begin{innerlist}
+        \item GPA: 3.23
+        \end{innerlist}
+\end{outerlist}
+
+\section{Professional Experience}
+%
+\href{http://www.lyondellbasell.com/LandingPages/SolvayEngineeredPolymers}{\textbf{Solvay Engineered Polymers}}, Mansfield, TX USA
+\begin{outerlist}
+
+\item[] \textit{Graduate Technical Intern}%
+        \hfill \textbf{May 2007 to August 2007}
+\begin{innerlist}
+\item Designed experiments to test additive migration and degradation in thermoplastics.
+\item Trained researchers to use lab equipment such as tensile testers and injection molders.
+\item Assisted other interns in Project Engineering with reducing production down time.
+\end{innerlist}
+
+\item[] \textit{Project Engineering Intern}%
+        \hfill \textbf{May 2006 to August 2006}
+\begin{innerlist}
+\item Successfully designed improved cooling system for 3000 horsepower motors to prevent motor failures.
+\item Managed contractors for installation of improved lighting, safety equipment, and various structures to improve serviceability of polymer production lines.  
+\end{innerlist}
+
+\end{outerlist}
+
+\blankline
+
+\href{http://msen.tamu.edu/labfacilities.html}{\textbf{Texas A\&M ECAE Lab}}, College Station, TX USA
+\begin{outerlist}
+\item[] \textit{Machinist}%
+        \hfill \textbf{June 2005 to August 2005}
+\begin{innerlist}
+\item Planned and implemented machining processes to produce test
+  billets from a raw round ingot.
+\item Assisted with construction of a custom annealing furnace.
+\item Assisted with operation of equal channel angular extruder.
+\end{innerlist}
+
+\end{outerlist}
+
+\section{Technical Skills}
+%
+Instrumentation and Control:
+        \href{http://www.mathworks.com/products/simulink/}{Simulink},
+        \href{http://www.ni.com/}{LabVIEW}, 
+        \href{http://www.omega.com/}{Omega} temperature controllers,
+        and
+        \href{http://www.ni.com}{National Instruments}
+        control and data acquisition hardware and software
+
+\blankline
+
+Applications: Microsoft Office, Python,
+\href{http://www.mathworks.com/products/matlab/}{Matlab}, \LaTeX, LyX,
+Emacs, and other common productivity packages for Windows and Linux
+platforms
+
+\blankline
+
+Python/\href{http://www.scipy.org/}{SciPy}/%
+\href{http://numpy.scipy.org/}{NumPy}
+experience: linear algebra, polynomials, optimization, curve fitting,
+object oriented programming, emission control catalyst modeling, heat
+exchanger modeling, thermoelectric device modeling
+
+\blankline
+
+\href{http://www.mathworks.com/products/matlab/}{\textsc{Matlab}}
+experience: linear algebra, polynomials, stiff ODEs, vehicle dynamics
+modeling, combustion catalyst modeling, vapor deposition modeling
+
+\blankline
+
+
+Operating Systems: MS Windows XP, MS Windows 7, and Ubuntu Linux
+
+\section{Awards}
+%
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at Austin}}, Austin, TX USA
+\begin{innerlist}
+\item Richard J. Kokes Travel Award
+\item Association of Energy Engineers Foundation Scholarship Award
+\item N.K. Wright Centennial Memorial Endowed Presidential Scholarship
+\item Nano Night '08 Best Poster
+\end{innerlist}
+
+\blankline
+
+\href{http://www.tamu.edu/}{\textbf{Texas A\&M University}}, College Station, TX USA
+\begin{innerlist}
+\item American Society of Materials (ASM) International (Houston Chapter) Scholarship
+\item Society of Fire Protection Engineers Scholarship
+\end{innerlist}
+
+\blankline
+
+\textbf{Prior to University Education}
+\begin{innerlist}
+\item Eagle Scout
+\end{innerlist}
+
+\section{Academic Experience}
+%
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at Austin}}, Austin, TX USA
+\begin{outerlist}
+
+\item[] \textit{Graduate Research Assistant}%
+    \hfill \textbf{January 2008 to Present}
+	    \begin{innerlist}
+        \item Developed scalable method for chemical vapor transport ZnO nanowire growth
+        \item Designed heterogeneous combustion reactor for testing species transport enhancement
+        caused by ZnO nanowires
+        \end{innerlist}~
+
+\item[] \textit{Teaching Assistant}%
+        \hfill \textbf{September 2007 to December 2007}
+\begin{innerlist}
+	\item Led lab sessions for ME 139L - Heat Transfer Lab
+	\item Graded lab reports, quizzes, and tests
+	\item Provided instruction on effective technical writing
+\end{innerlist}~
+\end{outerlist}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
