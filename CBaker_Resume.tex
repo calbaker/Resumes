@@ -1,5 +1,5 @@
 % LaTeX resume using res.cls
-\documentclass[line,margin]{res} 
+\documentclass[centered]{res} 
 \usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 \usepackage{color,hyperref}
@@ -11,23 +11,27 @@
 
 \begin{document}
 
-\name{Chad A. Baker}
-% \address used twice to have two lines of address
-\address{\href{mailto:calbaker@utexas.edu}{calbaker@utexas.edu}} 
-\address{214-695-4636}
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Chad A. Baker}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{calbaker@utexas.edu}
+ \moveleft.5\hoffset\centerline{214-695-4636}
  
 \begin{resume}
  
 \section{Objective}
 
-I would like a post-doc or career position utilizing my skills in
-modeling and experimentation to solve challenging technical problems
-that address energy or environmental problems facing humanity.  
+Post-doc or career position utilizing skills in modeling and
+experimentation to solve challenging technical problems that address
+energy or environmental problems facing humanity.
 
 \section{Interests}
-%
-modeling of mass, heat, and energy transport processes; combustion
-modeling; catalyst modeling; heat exchanger optimization; verifying
+% maybe make this a list environment
+Modeling of mass, heat, and energy transport processes; combustion
+modeling; catalyst modeling; heat exchanger optimization; validating
 models through experimentation
  
 \section{Education}
@@ -36,86 +40,91 @@ models through experimentation
     Austin}}, Austin, TX USA \\
 Ph.D., \href{http://www.me.utexas.edu/}{Mechanical Engineering},
 Expected Graduation: Dec 2012 \\ 
-Adviser:
+Advisers:
 \href{http://www.me.utexas.edu/directory/faculty/hall/matthew/33/}{Professor
-  Matthew J. Hall} \\
-Area of Study: Thermal/Fluids Systems, GPA: 3.67/4.00
+  Matthew J. Hall} and \href{http://www.me.utexas.edu/~lishi/}{Professor Li Shi}\\
+Area of Study: Thermal/Fluids Systems \\
+GPA: 3.67/4.00
 
 \href{http://www.utexas.edu/}{\textbf{The University of Texas at
-    Austin}}, Austin, TX USA \\ 
-M.S., \href{http://www.me.utexas.edu/}{Mechanical Engineering}, August
+    Austin}}, Austin, TX USA \\
+Master of Science, \href{http://www.me.utexas.edu/}{Mechanical
+  Engineering}, August
 2009 \\
 Thesis Topic: \emph{Vapor Transport Techniques for Growing
   Macroscopically Uniform Zinc Oxide Nanowires} \\
-Adviser:
+Advisers:
 \href{http://www.me.utexas.edu/directory/faculty/hall/matthew/33/}{Professor
-  Matthew J. Hall} \\
-Area of Study: Thermal/Fluids Systems, GPA: 3.46/4.00
+  Matthew J. Hall} and \href{http://www.me.utexas.edu/~lishi/}{Professor Li Shi}\\
+Area of Study: Thermal/Fluids Systems \\
+GPA: 3.46/4.00
 
 \href{http://www.tamu.edu/}{\textbf{Texas A\&M University}}, College
 Station, TX USA \\
-B.S., \href{http://www.mengr.tamu.edu/}{Mechanical Engineering}, May
+Bachelor of Science, \href{http://www.mengr.tamu.edu/}{Mechanical
+  Engineering}, May
 2007  \\
 GPA: 3.23/4.00
 
 \section{Professional Experience}
 
+\textit{Graduate Research Assistant} \\
 \href{http://www.utexas.edu/}{\textbf{The University of Texas at
-    Austin}}, Austin, TX USA
-\begin{itemize}
-\item \textit{Graduate Research Assistant}%
-  \hfill \textbf{January 2008 to Present}
-  \begin{itemize}
-  \item Developed scalable method for chemical vapor transport ZnO
-    nanowire growth
-  \item Designed heterogeneous combustion reactor for testing species
-    transport enhancement caused by ZnO nanowires
-  \end{itemize}~
+    Austin}}, Austin, TX USA%
+\hfill \textbf{January 2008 to Present}
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Developed two dimensional analytical model for catalyst
+  species concentration
+\item Developed two dimensional thermoelectric device model with
+  iterative coupling to heat exchanger model
+\item Designed heat exchanger experiment to test thermoelectric
+  devices in Cummins engine exhaust
+\item Developed scalable method for chemical vapor transport ZnO
+  nanowire growth
+\item Designed heterogeneous combustion reactor for testing species
+  transport enhancement caused by ZnO nanowires
 \end{itemize}
 
+\textit{Graduate Technical Intern} \\
 \href{http://www.lyondellbasell.com/LandingPages/SolvayEngineeredPolymers}{\textbf{Solvay
     Engineered Polymers}}, Mansfield, TX USA 
-\begin{itemize}
-\item \textit{Graduate Technical Intern}%
-  \hfill \textbf{May 2007 to August 2007}
-  \begin{itemize}
-  \item Designed experiments to test additive migration
-    and degradation in thermoplastics.
-  \item Trained researchers to use lab equipment such as tensile
-    testers and injection molders.
-  \item Assisted other interns in Project Engineering with
-    reducing production down time.
-  \end{itemize}
-\item \textit{Project Engineering Intern}%
-  \hfill \textbf{May 2006 to August 2006}
-  \begin{itemize}
-  \item Successfully designed improved cooling system for 3000
-    horsepower motors to prevent motor failures.
-  \item Managed contractors for installation of improved lighting,
-    safety equipment, and various structures to improve serviceability
-    of polymer production lines.
-  \end{itemize}
+\hfill \textbf{May 2007 to August 2007}
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Designed experiments to test additive migration
+  and degradation in thermoplastics.
+\item Trained researchers to use lab equipment such as tensile
+  testers and injection molders.
+\item Assisted other interns in Project Engineering with
+  reducing production down time.
 \end{itemize}
 
-\newpage{}
+\textit{Project Engineering Intern} \\
+\href{http://www.lyondellbasell.com/LandingPages/SolvayEngineeredPolymers}{\textbf{Solvay
+    Engineered Polymers}}, Mansfield, TX USA 
+\hfill \textbf{May 2006 to August 2006}
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Successfully designed improved cooling system for 3000
+  horsepower motors to prevent motor failures.
+\item Managed contractors for installation of improved lighting,
+  safety equipment, and various structures to improve serviceability
+  of polymer production lines.
+\end{itemize}
 
+\textit{Machinist} \\
 \textbf{Texas A\&M ECAE Lab}, College Station, TX USA
-\begin{itemize}
-\item \textit{Machinist}%
-  \hfill \textbf{June 2005 to August 2005}
-  \begin{itemize}
-  \item Planned and implemented machining processes to produce test
-    billets from a raw round ingot.
-  \item Assisted with construction of a custom annealing furnace.
-  \item Assisted with operation of equal channel angular extruder.
-  \end{itemize}
+\hfill \textbf{June 2005 to August 2005}
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Planned and implemented machining processes to produce test
+  billets from a raw round ingot.
+\item Assisted with construction of a custom annealing furnace.
+\item Assisted with operation of equal channel angular extruder.
 \end{itemize}
 
 \section{Publications}
 
 Baker, C., P. Vuppuluri, M. Hall, L. Shi., \textit{Model of Heat
   Exchanger for Waste Heat Recovery from Diesel Engine Exhaust for
-  Thermoelectric Power Generation}, Submitted for peer reviewed
+  Thermoelectric Power Generation}, Submitted for peer-reviewed
 publication in a special issue of the Journal of Electronic Materials
 for \href{http://ict2011.its.org/}{ICT 2011} conference proceedings.
 
@@ -143,9 +152,9 @@ and
 control and data acquisition hardware and software
 
 Applications: Microsoft Office, Python,
-\href{http://www.mathworks.com/products/matlab/}{Matlab}, \LaTeX, LyX,
-Emacs, and other common productivity packages for Windows and Linux
-platforms
+\href{http://www.mathworks.com/products/matlab/}{\textsc{Matlab}},
+  \LaTeX, LyX, Emacs, and other common productivity packages for
+  Windows and Linux platforms
 
 Python/\href{http://www.scipy.org/}{SciPy}/%
 \href{http://numpy.scipy.org/}{NumPy}
@@ -161,26 +170,23 @@ Operating Systems: MS Windows XP, MS Windows 7, and Ubuntu Linux
 
 \section{Awards}
 % 
-\href{http://www.utexas.edu/}{\textbf{The University of Texas at Austin}}, Austin, TX USA
-\begin{itemize}
-\item Richard J. Kokes Travel Award for
-  \href{http://www.22nam.org/}{22nd North American Catalysis Society
-    Meeting}
-\item Association of Energy Engineers Foundation Scholarship Award
-\item N.K. Wright Centennial Memorial Endowed Presidential Scholarship
-\item Nano Night '08 Best Poster
-\end{itemize}
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at
+    Austin}}, Austin, TX USA \\
+Richard J. Kokes Travel Award for
+\href{http://www.22nam.org/}{22nd North American Catalysis Society
+  Meeting} \\
+Association of Energy Engineers Foundation Scholarship Award \\
+N.K. Wright Centennial Memorial Endowed Presidential Scholarship \\
+Nano Night '08 Best Poster \\
 
-\href{http://www.tamu.edu/}{\textbf{Texas A\&M University}}, College Station, TX USA
-\begin{itemize}
-\item American Society of Materials (ASM) International (Houston Chapter) Scholarship
-\item Society of Fire Protection Engineers Scholarship
-\end{itemize}
+\href{http://www.tamu.edu/}{\textbf{Texas A\&M University}}, College
+Station, TX USA \\
+American Society of Materials (ASM) International (Houston Chapter)
+Scholarship \\
+Society of Fire Protection Engineers Scholarship \\
 
-\textbf{Prior to University Education}
-\begin{itemize}
-\item Eagle Scout
-\end{itemize}
+\textbf{Prior to University Education} \\
+Eagle Scout
 
 \end{resume}
 \end{document}
