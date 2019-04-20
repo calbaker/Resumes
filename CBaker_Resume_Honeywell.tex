@@ -1,0 +1,183 @@
+% LaTeX resume using res.cls
+\documentclass[centered]{res} 
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+\hyphenpenalty=100000
+\sectionskip=8pt
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Chad A. Baker}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{Resume}
+ \moveleft.5\hoffset\centerline{calbaker@gmail.com}
+ \moveleft.5\hoffset\centerline{214-695-4636}
+ 
+\begin{resume}
+ 
+% Notes for myself (CAB).  For a CV move Presentations and
+% Publications ahead of professional experience.  Add sections for
+% teaching experience, teaching interests, research experience, and
+% research interests.  Also, add a section for the dissertation
+% abstract.  Also, add section for leadership experience.  
+
+\section{Objective}
+Full-time position utilizing skills in modeling and experimentation to
+solve challenging technical problems that improve the sustainability
+of transportation. 
+%
+\section{Professional Experience}
+\textit{Thermal Systems Research Engineer} \\
+Ford Motor Company, Dearborn, MI
+\hfill \textbf{January 2013 to Present} 
+\newline Job Duties
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Developed scalable, transient, collaborative thermal systems
+  modeling infrastructure in \newline Dymola/Modelica to enable closed
+  loop, multi-domain full vehicle models with thermal behavior
+\item Developed thermal plant subsystem transient models for numerous
+  hybrid electric vehicle platforms, including F-150, Explorer,
+  Fusion, and future dedicated battery electric vehicle
+\item Assessed viability of various waste heat recovery technologies
+\item Created toolsets for assessing best control actions of existing
+  waste heat recovery technologies
+\end{itemize} \vspace{-8pt} 
+Patents
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item 9896987 - Controller for Exhaust Heat Conversion to Heat and Electricity
+\item 10119499 - Exhaust Gas Recirculation System and Method for Operation Thereof
+\item 10107213 - Method and System for Exhaust Gas Recirculation and Heat Recovery
+\end{itemize} \vspace{-8pt}
+%
+\textit{Graduate Technical Intern} \\
+\href{http://www.lyondellbasell.com/LandingPages/SolvayEngineeredPolymers}{\textbf{Solvay
+    Engineered Polymers}}, Mansfield, TX USA 
+\hfill \textbf{May 2007 to August 2007} \\
+Polymer additives to increase durability of raw material for Ford King
+Ranch F-150 wheel flare
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Designed experiments to test additive migration
+  and degradation in thermoplastics.
+\item Trained research engineers to use lab equipment such as tensile
+  testers and injection molders.
+\item Assisted other interns in Project Engineering with
+  reducing production down time.
+\end{itemize} \vspace{-8pt}
+%
+\textit{Project Engineering Intern} \\
+\href{http://www.lyondellbasell.com/LandingPages/SolvayEngineeredPolymers}{\textbf{Solvay
+    Engineered Polymers}}, Mansfield, TX USA 
+\hfill \textbf{May 2006 to August 2006} \\
+Polymer manufacturing plant improvements 
+\begin{itemize} \itemsep -2pt % reduce space between items
+\item Successfully designed improved HVAC system for 3000 horsepower
+  motors to prevent motor failures.
+\item Managed contractors for installation of improved lighting,
+  safety equipment, and various structures to improve serviceability
+  of polymer production lines.
+\end{itemize} 
+%
+\section{Research Interests}
+% maybe make this a list environment
+mass, heat, and energy transport processes; automotive powertrain optimization; heat
+exchanger optimization; waste heat recovery and conversion; developing
+fast running, low fidelity models of complex systems; designing
+experiments to validate models; multi-physics modeling
+ 
+\section{Education}
+%
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at
+    Austin}}, Austin, TX USA \\
+Ph.D., \href{http://www.me.utexas.edu/}{Mechanical Engineering},
+December 2012 \\
+Dissertation Topic: \emph{Simulation, Design, and Experimental Characterization of
+  Catalytic and Thermoelectric Systems for Removing Emissions and
+  Recovering Waste Energy from Engine Exhaust} \\
+Advisers:
+\href{http://www.me.utexas.edu/directory/faculty/hall/matthew/33/}{Professor
+  Matthew J. Hall} and \href{http://www.me.utexas.edu/~lishi/}{Professor Li Shi}\\
+Area of Study: Thermal/Fluids Systems \\
+GPA: 3.67/4.00 \\
+%
+\newpage
+\href{http://www.utexas.edu/}{\textbf{The University of Texas at
+    Austin}}, Austin, TX USA \\
+Master of Science, \href{http://www.me.utexas.edu/}{Mechanical
+  Engineering}, August 2009 \\
+Thesis Topic: \emph{Vapor Transport Techniques for Growing
+  Macroscopically Uniform Zinc Oxide Nanowires} \\
+Advisers:
+\href{http://www.me.utexas.edu/directory/faculty/hall/matthew/33/}{Professor
+  Matthew J. Hall} and \href{http://www.me.utexas.edu/~lishi/}{Professor Li Shi}\\
+Area of Study: Thermal/Fluids Systems \\
+GPA: 3.46/4.00\\
+%
+\href{http://www.tamu.edu/}{\textbf{Texas A\&M University}}, College
+Station, TX USA \\
+Bachelor of Science, \href{http://www.mengr.tamu.edu/}{Mechanical
+  Engineering}, May
+2007  \\
+GPA: 3.23/4.00
+
+\section{Important Coursework}
+% maybe make this a list environment
+Combustion Theory, Convection Heat Transfer, Multi-scale Flow and
+Transport Phenomena, Reacting Flows and Plasmas, Micro-scale Thermal
+Fluids Sciences, Molecular Gas Dynamics, Fundamentals of Heat and Mass
+Transfer, Fundamentals of Combustion, Fundamentals of Incompressible
+Flow, Internal Combustion Engines  
+ 
+\section{Publications}
+
+C. Baker, A. O. Emiroglu, R. Mallick, O. Ezekoye, M. Hall, L. Shi.,
+\textit{Experimental and Modeling Study of Hydrocarbon Oxidation over
+  Catalytic Surfaces of ZnO Nanowires and $\gamma$-Alumina}, in
+preparation. \\
+\vspace{-5pt} \\
+%
+C. Baker, L. Shi, M. Hall, \textit{Simulation of Thermoelectric
+  Module Heat Exchanger Performance in the Exhaust of a Medium-Duty
+  Diesel Engine}, in review.  \\
+\vspace{-5pt} \\
+%
+C. Baker, P. Vuppuluri, M. Hall, L. Shi., \textit{Model of Heat
+  Exchanger for Waste Heat Recovery from Diesel Engine Exhaust for
+  Thermoelectric Power Generation}, accepted.  
+
+\section{Technical Skills}
+% 
+Instrumentation and Control:
+\href{http://www.mathworks.com/products/simulink/}{Simulink},
+\href{http://www.ni.com/}{LabVIEW}, 
+\href{http://www.omega.com/}{Omega} temperature controllers,
+and
+\href{http://www.ni.com}{National Instruments}
+control and data acquisition hardware and software
+\vspace{5pt} \\
+General: Proficient at machining, Scanning Electron Microscopy, and basic welding
+\vspace{5pt} \\
+%
+Computer Skils: Python, Modelica/Dymola,
+\href{http://www.mathworks.com/products/matlab/}{\textsc{Matlab}}, MS
+Office, \LaTeX, Git, object oriented programming, Linux, SolidWorks,
+Autodesk Inventor
+%
+
+\end{resume}
+\end{document}
+
+
+
+
+
+
+

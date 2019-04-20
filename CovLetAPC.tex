@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+% Version 1.0 (28/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute 
+% http://www.rpi.edu/dept/arc/training/latex/resumes/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
+
+\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font 
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\topmargin=-1in % Moves the top of the document 1 inch above the default
+\textheight=8.5in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{}
+% {Mrs. Jane Smith \\
+% Recruitment Officer \\
+% The Corporation \\
+% 123 Pleasant Lane \\
+% City, State 12345} 
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\large\bf Chad Baker, PhD \\ % Your name
+%\vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
+calbaker@gmail.com % Your address and phone number
+\end{center} 
+\vfill
+
+\signature{Chad Baker} % Your name for the signature at the bottom
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+\opening{} I have a PhD in mechanical engineering with an emphasis in
+thermal/fluid systems from the University of Texas at Austin.  I have
+spent the past 6 years working as a Thermal Systems Research Engineer
+at Ford motor company, developing thermal models that enable vehicle
+level fuel economy simulations.  In addition, I've developed an
+extensible object-oriented Modelica package for the modeling of
+vehicle thermal systems and components (as well as some electrical and
+mechanical domain components) that is used by around 30 engineers in
+Ford Motor Company for both analysis and new vehicle model
+development.  I've also been instrumental in developing a process for
+utilizing IBM Rational Team Concert version control and workflow
+management software, and I've been heavily involved in training others
+to use the software and politely enforcing process discipline.  Other
+work I've done at Ford has included multi-objective Pareto
+optimization of semi-empirical, physics-based models and
+phenomenological meta models using ModeFRONTIER and other tools.  In
+some cases, these models were entirely empirical (i.e. no physics) and
+were based on polynomial regressions, lookup tables, or neural
+networks.  All of my work at Ford has been directed at reducing fossil
+fuel consumption by improving fuel economy in hybrid electric vehicles
+and range in battery electric vehicles.  Prior to that, I had
+extensive experience working with Python, MATLAB/Simulink (which I
+still use daily at Ford), Git version control, Linux, National
+Instruments products, and various other computational tools.  For my
+MS thesis, I applied these skills toward building, testing, and
+modeling a novel catalyst substrate for automotive emission control.
+I also took a graduate level class in Air Pollution Control.
+
+\closing{Sincerely,}
+
+
+\encl{resume} % List your enclosed documents here, comment this out to get rid of the "encl:"
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
