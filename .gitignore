@@ -1,8 +1,49 @@
 *.log
 *.aux
-*.pdf
 *.tex~
 *.doc
 *.docx
 *.out
 *.ps
+*.png
+
+# Compiled PDF files
+*.pdf
+
+# Auxiliary and log files
+*.aux
+*.bbl
+*.blg
+*.log
+*.lof
+*.lot
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex*
+*.dvi
+*.ps
+*.xdv
+*.brf
+*.nav
+*.snm
+
+# Editor-specific files
+*~
+*.swp
+*.swo
+*.bak
+*.backup
+*.tmp
+
+# TeXShop (Mac) files
+*.synctex.gz
+*.pdfsync
+
+# VS Code and other IDE files
+.vscode/
+*.code-workspace
+
+# Overleaf project files
+auto/
