@@ -15,7 +15,7 @@
     // birth: "January 1, 1990",
     linkedin: "chad-baker-056b43325",
     address: "Golden, CO, USA",
-    positions: ("Researcher Engineer",),
+    positions: ("Research Engineer",),
   ),
   profile-picture: none,
   date: datetime.today().display(),
