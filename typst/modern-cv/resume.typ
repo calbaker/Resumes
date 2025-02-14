@@ -10,7 +10,7 @@
     // homepage: "https://example.com",
     // phone: "(+1) 111-111-1111",
     github: "calbaker",
-    // scholar: "",
+    scholar: "https://scholar.google.com/citations?user=6rN6zegAAAAJ&hl=en",
     orcid: "0000-0003-2233-221X",
     // birth: "January 1, 1990",
     linkedin: "chad-baker-056b43325",
@@ -24,6 +24,9 @@
   show-footer: false,
   paper-size: "us-letter",
 )
+
+#show bibliography: none
+#bibliography("pubs.bib", style: "chicago-author-date")
 
 = Highlights
 #resume-item[
@@ -71,6 +74,8 @@
 )
 #resume-skill-item(
   "Research Interests", (
+    "Energy-aware Routing and Scheduling",
+    "Climate Change Mitigation",
     "Transportation Systems",
     "Energy Systems",
     "Vehicle Powertrains",
@@ -90,6 +95,7 @@
     "Machining",
     "Welding (MIG and TIG)",
     "Soldering",
+    "Bicycle Repair",
     "Motorcycle Repair",    
   )
 )
@@ -108,13 +114,14 @@
 
 #resume-item[
   - Accomplishments
-    - Lead developer for
-      #link("https://github.com/NREL/altrios")[NREL's ALTRIOS] rail decarbonization
-      framework
-    - Lead developer for
-      #link("https://github.com/NREL/fastsim/tree/fastsim-3")[NREL's FASTSim]
-      vehicle energy usage simulation software for simulating on-road vehicle fuel
-      economy and/or energy consumption performance
+    - Lead and founding developer for  NREL's ALTRIOS rail decarbonization
+      framework (#link("https://github.com/NREL/altrios")[GitHub] |
+      #link("https://www.nrel.gov/transportation/altrios.html")[NREL ALTRIOS Page])
+    - Lead developer for vehicle energy usage simulation software for
+      simulating on-road vehicle fuel economy and/or energy consumption
+      performance (#link("https://github.com/NREL/fastsim")[GitHub] |
+      #link("https://github.com/NREL/fastsim/tree/fastsim-3")[NREL FASTSim
+      Page])
     - Consistently mentor 1-2 interns, with two of them becoming full time employees
       with exceptional performance
     - Won "Outstanding Mentor" award for work with interns and junior employees
@@ -128,7 +135,10 @@
       examples of functional testing, providing interactive web-based documentation
       for software packages, recipes for using HPC and cloude computing resources
   - Select Publications
-    - ...
+    - #cite(<Baker_2023>, form: "full")
+    - #cite(<carow2022high>, form: "full")
+    - #cite(<Baker_2021>, form: "full")
+    - #cite(<Moniot_2021>, form: "full")
 ]
 
 #resume-entry(
@@ -236,6 +246,7 @@
 
 = Personal Interests and Hobbies
 #resume-item[
+  playing guitar, playing mandolin, cooking in cast iron, fermenting foods,
   hiking, biking (road and mountain), nordic skiing, kayaking, swimming, alpine
   skiing, rock climbing, sewing, sailing, teaching new skills to others
 ]
