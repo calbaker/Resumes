@@ -169,7 +169,7 @@
   title: "Graduate Technical Intern",
   location: "Solvay Engineered Polymers, Mansfield, TX, USA",
   date: "Summer 2007",
-  description: "Conducted experiments to test polymer additives for weather and" + "UV stabilization",
+  description: "Conducted experiments to test polymer additives for weather and UV stabilization",
 )
 
 #resume-item[
