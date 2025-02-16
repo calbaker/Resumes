@@ -79,6 +79,7 @@
     "Transportation Systems",
     "Energy Systems",
     "Vehicle Powertrains",
+    "Numerical Analysis",
     "Thermal Management Optimization",
     "Heuristic-based Controls",
     "Machine Learning",
