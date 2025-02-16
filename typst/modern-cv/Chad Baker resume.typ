@@ -123,6 +123,9 @@
       performance (#link("https://github.com/NREL/fastsim")[GitHub] |
       #link("https://github.com/NREL/fastsim/tree/fastsim-3")[NREL FASTSim
       Page])
+    - Lead developer for the Rust language differential equation system solver
+      package, DESS (#link("https://github.com/NREL/de-system-solver")[GitHub] |
+      #link("https://crates.io/crates/dess")[crates.io])
     - Consistently mentor 1-2 interns, with two of them becoming full time employees
       with exceptional performance
     - Won "Outstanding Mentor" award for work with interns and junior employees
