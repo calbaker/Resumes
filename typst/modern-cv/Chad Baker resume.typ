@@ -73,6 +73,22 @@
   ),
 )
 #resume-skill-item(
+  "Python", (
+    strong("numpy"),
+    strong("scipy"),
+    strong("matplotlib"),
+    strong("pip"),
+    strong("pymoo"),
+    strong("environment setup"),
+    strong("package setup"),
+    strong("releasing via PyPI"),
+    strong("pyo3"),
+    "scikit-learn",
+    "seaborn",
+    "plotly",
+  ),
+)
+#resume-skill-item(
   "Research Experience", (
     "Open-Source Engineering Software Development",
     "Thermal Management Optimization",
@@ -106,8 +122,9 @@
     "Engineering Software Development",
   ),
 )
-#resume-skill-item("Hardware Skills",
+#resume-skill-item("Mechanical Skills",
   (
+    "Mechanical Engineering Lab Skills",
     "Scanning Electron Microscopy",
     "Machining",
     "Welding (MIG and TIG)",
@@ -140,6 +157,14 @@
       performance (#link("https://github.com/NREL/fastsim")[GitHub] |
       #link("https://www.nrel.gov/transportation/fastsim.html")[NREL FASTSim
       Page])
+    - Upstream contributor to NREL's RouteE
+      (#link("https://nrel.github.io/routee-powertrain/what_is_routee.html")[GitHub Book]) |
+      #link("https://www.nrel.gov/transportation/route-energy-prediction-model.html")[NREL RouteE Page]),
+      which is used as the foundation of
+      #link("https://www.gstatic.com/gumdrop/sustainability/google-maps-eco-friendly-routing.pdf")[Google Maps Eco-Friendly Routing]
+    - Former lead developer of NREL's
+      #link("https://www.nrel.gov/transportation/t3co.html")[Transportation Technology Total Cost of Ownership]
+      software, prior to handoff to co-worker
     - Lead and founding developer for NREL's Modelica-inspired, Rust-language differential equation system solver
       package, DESS (#link("https://github.com/NREL/de-system-solver")[GitHub] |
       #link("https://crates.io/crates/dess")[crates.io])
