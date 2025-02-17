@@ -6,9 +6,9 @@
   author: (
     firstname: "Chad",
     lastname: "Baker",
-    email: "calbaker@gmail.com",
+    email: "chadbaker7912@proton.me",
     // homepage: "https://example.com",
-    // phone: "(+1) 111-111-1111",
+    phone: "(+1) 214-695-4636",
     github: "calbaker",
     scholar: "https://scholar.google.com/citations?user=6rN6zegAAAAJ&hl=en",
     orcid: "0000-0003-2233-221X",
@@ -28,29 +28,29 @@
 #show bibliography: none
 #bibliography("pubs.bib", style: "chicago-author-date")
 
-= Highlights
+= Highlights <highlights>
 #resume-item[
-  - Over 10 years experience in engineering research: developing foundational
-    open-source analysis tools, model-based design and analysis, mentoring interns
-    and junior employees, project management, multi-physics modeling, thermal
-    modeling, vehicle controls design and optimization, general optimization,
-    proposal writing, technical writing, presenting at conferences
-  - Seeking opportunity outside USA to improve the sustainability and equity of
-    transportation and energy systems by leading development of open source
-    engineering and techno-economic analysis software and developing research ideas
-    and proposals to advance related research
+  - Over 10 years experience in engineering research: developing and releasing
+    foundational open-source engineering software, model-based design and
+    analysis, mentoring interns and junior employees, project management,
+    multi-physics modeling, thermal modeling, vehicle controls design and
+    optimization, general optimization, proposal writing, technical writing,
+    presenting at conferences
+  - Founding and/or lead developer for numerous open source
+    software packages release on PyPI, crates.io, and/or GitHub, see
+    #link(<nrel-accomplishments>)[NREL Accomplishments]
+  - Seeking opportunity to:
+    - lead development of open source engineering software
+    - improve the sustainability and equity of transportation and energy systems
+    - develop research ideas and proposals to advance related research
   - Software I developed is actively being used in
     #link("https://www.gstatic.com/gumdrop/sustainability/google-maps-eco-friendly-routing.pdf")[Google Maps Eco-Friendly Routing]
-  - Lead developer for several open source software packages:
-    #link("https://github.com/NREL/fastsim/tree/fastsim-3")[FASTSim],
-    #link("https://github.com/NREL/altrios")[ALTRIOS], and
-    #link("https://github.com/NREL/de-system-solver")[DESS]
   - Extensive experience developing, documenting, and promoting best practices
     for engineering software development so that engineers can spend more time
     focused on technical problems and less time configuring software
 ]
 
-= Skills
+= Skills <skills>
 #resume-skill-item(
   "Programming Languages", (strong("Rust"), strong("Python"), "Modelica", "MATLAB"),
 )
@@ -70,6 +70,22 @@
     "AutoCAD",
     "NI LabVIEW",
     "MS Office",
+  ),
+)
+#resume-skill-item(
+  "Research Experience", (
+    "Open-Source Engineering Software Development",
+    "Thermal Management Optimization",
+    "Vehicle Powertrain Simulation",
+    "Computational Fluid Dynamics (CFD)",
+    "Numerical Analysis",
+    "Heuristic-based Controls",
+    "Transportation Systems",
+    "Machine Learning (ML)",
+    "Multi-Objective Optimization",
+    "Heat Transfer",
+    "Mentoring",
+    "Project Management",
   ),
 )
 #resume-skill-item(
@@ -96,49 +112,52 @@
     "Machining",
     "Welding (MIG and TIG)",
     "Soldering",
-    "Bicycle Repair",
-    "Motorcycle Repair",    
+    "Bicycle Maintenance and Repair",
+    "Motorcycle Maintenance and Repair",    
   )
 )
 #resume-skill-item("Spoken Languages", (strong("English"), "German"))
 
-= Experience
+= Experience <experience>
 
 #resume-entry(
   title: "Researcher IV",
-  location: "National Renewable Energy Lab, Golden, CO",
+  location: "National Renewable Energy Lab (NREL), Golden, CO",
   date: "2019 - Present",
   description: "Lead numerous technical projects with the goal of reducing"
     + "transportation carbon emissions",
   title-link: "https://research-hub.nrel.gov/en/persons/chad-baker",
 )
 
+<nrel-accomplishments>
 #resume-item[
   - Accomplishments
     - Lead and founding developer for  NREL's ALTRIOS rail decarbonization
       framework (#link("https://github.com/NREL/altrios")[GitHub] |
       #link("https://www.nrel.gov/transportation/altrios.html")[NREL ALTRIOS Page])
-    - Lead developer for vehicle energy usage simulation software for
-      simulating on-road vehicle fuel economy and/or energy consumption
+    - Lead developer for NREL's FASTSim vehicle energy usage simulation software
+      for simulating on-road vehicle fuel economy and/or energy consumption
       performance (#link("https://github.com/NREL/fastsim")[GitHub] |
-      #link("https://github.com/NREL/fastsim/tree/fastsim-3")[NREL FASTSim
+      #link("https://www.nrel.gov/transportation/fastsim.html")[NREL FASTSim
       Page])
-    - Lead developer for the Rust language differential equation system solver
+    - Lead and founding developer for NREL's Modelica-inspired, Rust-language differential equation system solver
       package, DESS (#link("https://github.com/NREL/de-system-solver")[GitHub] |
       #link("https://crates.io/crates/dess")[crates.io])
     - Consistently mentor 1-2 interns, with two of them becoming full time employees
       with exceptional performance
     - Won "Outstanding Mentor" award for work with interns and junior employees
-    - Established broadly used best practices documentation and template GitHub repos
+    - Co-led NREL's Software Engineering for Engineering Software (SEES) ongoing seminar 
     - Developed python-based multi-objective optimization/calibration workflow used by
       numerous past and ongoing projects
     - Saved tens of thousands of dollars in compute (HPC/cloud) costs by updating
-      numerous NREL codebases to #link("https://www.rust-lang.org/")[Rust Programming Language]
-    - Introduced and demonstrated numerous coding best practices, including: automated
-      cross-platform compilation and testing via GitHub actions, instruction and
-      examples of functional testing, providing interactive web-based documentation
-      for software packages, recipes for using HPC and cloude computing resources
-  - Select Publications
+      numerous NREL codebases from MATLAB or Python to
+      #link("https://www.rust-lang.org/")[Rust Programming Language]
+    - Introduced and championed numerous coding best practices, including:
+      automated cross-platform compilation and testing for polyglot projects via
+      GitHub actions, instruction and examples of functional testing, providing
+      interactive web-based documentation for software packages, recipes for
+      using HPC and cloude computing resources
+  - Publications
     - #cite(<Baker_2023>, form: "full")
     - #cite(<carow2022high>, form: "full")
     - #cite(<Baker_2021>, form: "full")
@@ -201,7 +220,7 @@
     various structures to improve serviceability of polymer production lines.
 ]
 
-= Education
+= Education <education>
 
 #resume-entry(
   title: "The University of Texas at Austin",
@@ -248,9 +267,10 @@
   Materials
 ]
 
-= Personal Interests and Hobbies
+= Personal Interests and Hobbies <shenanigans>
 #resume-item[
   playing guitar, playing mandolin, cooking in cast iron, fermenting foods,
   hiking, biking (road and mountain), nordic skiing, kayaking, swimming, alpine
-  skiing, rock climbing, sewing, sailing, teaching new skills to others
+  skiing, rock climbing, sewing, sailing, teaching new skills to othersi,
+  learning `typst` to prepare this resume
 ]
