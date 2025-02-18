@@ -40,7 +40,7 @@
     software packages release on PyPI, crates.io, and/or GitHub, see
     #link(<nrel-accomplishments>)[NREL Accomplishments]
   - Seeking opportunity to:
-    - lead development of open source engineering software
+    - lead development of open source engineering and multi-physics software
     - improve the sustainability and equity of transportation and energy systems
     - develop research ideas and proposals to advance related research
   - Software I developed is actively being used in
@@ -120,6 +120,7 @@
     "Mentoring",
     "Project Management",
     "Engineering Software Development",
+    "Machine-Learning-Augmented Physics-Based Modeling",
   ),
 )
 #resume-skill-item("Mechanical Skills",
@@ -256,12 +257,18 @@
   // gpa: 3.67/4.00
 )
 #resume-item[
-  Coursework: \
-  Convection Heat Transfer,
-  Multi-scale Flow and Transport Phenomena,
-  Micro-scale Thermal Fluids Sciences,
-  Combustion Theory,
-  Air Pollution Control
+  - Coursework: \
+    Convection Heat Transfer,
+    Multi-scale Flow and Transport Phenomena,
+    Micro-scale Thermal Fluids Sciences,
+    Combustion Theory,
+    Air Pollution Control
+  - Publications
+    - #cite(<fateh2014high>, form:"full")
+    - #cite(<baker2012model>, form:"full")
+    - #cite(<baker2012simulation>, form:"full")
+    - #cite(<baker2012experimental>, form:"full"),
+    - #cite(<baker2009vapor>, form:"full")
 ]
 
 #resume-entry(
